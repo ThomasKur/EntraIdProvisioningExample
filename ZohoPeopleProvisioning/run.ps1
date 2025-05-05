@@ -379,7 +379,7 @@ Connect-AzAccount -Identity -AccountId $env:AZURE_CLIENT_ID
 Write-Output "Successfully authenticated with Azure."
 
 Write-Output "Authenticating with MgGraph using managed identity..."
-Connect-MgGraph -Identity -ClientId $env:AZURE_CLIENT_ID -ErrorAction Stop
+Connect-MgGraph -Identity -ClientId $env:AZURE_CLIENT_ID -NoWelcome -ErrorAction Stop
 Write-Output "Successfully authenticated with MgGraph."
 
 # Retrieve secrets from Azure Key Vault
